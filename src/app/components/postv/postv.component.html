@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Icep Homepage</title>
+    <style>
+        body{
+          background-image: url("assets/images/back.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      </style>
+</head>
+<body>
+
+<section class="overlay">
+<div class="regform">
+    <div class="logoI"><img src="assets\images\ICEP-Logo.png"></div>
+    
+    <form #postForm="ngForm">
+      
+      <h1>Post</h1>
+
+            <label>Vacancy Name: <input type="text"  name="vacancyName" class="input-box" placeholder="Enter vacancy name" #vacancyName required></label><br>
+   
+            <label>Vacancy details: </label><br>
+
+            <textarea rows="4" column="50" name="vacancyDesc" #vacancyDesc></textarea>
+            <label>Closing date: <input type="date" name="closingDate" class="input-box"  placeholder="Enter Date" #closingDate required></label><br> 
+              
+            <button (click)="post(vacancyName.value, vacancyDesc.value, closingDate.value)" type="submit" class="reg_btn" >Post</button>       
+</form>
+
+
+    <hr>
+   <p> &copy; all rights reserved</p>
+
+</div> 
+</section>
+
+</body>
+</html>

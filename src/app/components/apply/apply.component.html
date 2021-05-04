@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Icep Homepage</title>
+    <style>
+        body{
+          background-image: url("assets/images/back.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      </style>
+</head>
+<body>
+
+<section class="overlay">
+<div class="regform">
+    <div class="logoI"><img src="assets\images\ICEP-Logo.png"></div>
+    
+    <form #applyForm="ngForm">
+      
+      <h1>Apply</h1>
+      
+            <label for="inputAddress">First Name: <input class="input-box" id="firstName" name="firstName" #firstName type="text" placeholder="Enter firstname" required></label><br>
+
+            <label>Surname: <input type="text"  name="lastName" class="input-box" placeholder="Enter Surname" #lastName required></label><br>
+   
+            <label>Student no: <input type="text"  name="studentno" class="input-box"  placeholder="Enter Student no" #studentno required></label><br>
+
+            <label>Email: <input type="text" name="email" class="input-box"  placeholder="Enter Email" #email required name="email"></label><br> 
+                
+            <select name="specialization" id="specialization"  #specialization required>
+              <option value="" disabled selected hidden>Select Specialization</option>
+              <option value="SOFTWARE DEVELOPMENT">SOFTWARE DEVELOPMENT</option>
+              <option value="BUSINESS APPLICATIONS">BUSINESS APPLICATIONS</option>
+              <option value="MULTIMEDIA">MULTIMEDIA </option>
+              <option value="COMPUTER SYSTEMS">COMPUTER SYSTEMS</option>
+          </select>
+
+            <label>Contact: <input type="text" name="mobileno" id="mobileno" class="input-box" placeholder="Enter Contact no" #mobileno required></label><br>
+            <br>
+            <input type="file" #file><br>
+
+            <button (click)="apply(firstName.value, lastName.value, email.value, studentno.value, specialization.value, mobileno.value)" type="submit" class="reg_btn" >Apply</button>       
+</form>
+
+
+    <hr>
+   <p> &copy; all rights reserved</p>
+
+</div> 
+</section>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+p{
+    color: white;
+}
+.log_btn
+{
+    background-color:#ec444c ;
+}
+label{
+    color: white;
+    font-size: x-large;
+}
+
+.loginform
+{
+
+    width: 700px;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    background: rgba(56, 82, 153, 0.294);
+    padding: 50px;
+    margin: 0% auto 0;
+    text-align: center;
+}
+
+.loginform h1{
+
+    color: #44a6ec;
+    margin-bottom:30px;
+}
+
+.input-box
+{
+   border-radius: 20px; 
+   padding:10px;
+   margin:10px 0;
+   width:100%;
+   border:1px solid #999;
+   outline:none;
+   clear: both;
+}
+
+button{
+
+    color: white;
+    width:50%;
+    padding:10px;
+    border-radius:20px ;
+    font-size: 15px;
+    margin: 10px 0;
+    border:none;
+    outline:none;
+    cursor: pointer;
+}
+
+img
+{
+    width:500px;
+    height: 472px;
+}
+
+
+
+.logoI
+{
+    background-color: rgba(255, 255, 255, 0.568);
+}

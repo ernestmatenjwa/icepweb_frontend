@@ -1,0 +1,79 @@
+
+    <head>
+       
+    </head>
+  
+    <title>Dashboard</title>
+    <style>
+        body{
+          background-image: url("assets/images/back.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      </style> 
+
+<body >
+    <div class="navigation">
+        <ul>
+            <li>
+                <a [routerLink]="'/admin'">
+                    <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                    <span class="title">Home</span>
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="'/profiles'">
+                    <span class="icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                    <span class="title">View Profiles</span>
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="'/applications'">
+                    <span class="icon"><i class="fa fa-envelope-open-o" aria-hidden="true"></i></span>
+                    <span class="title">View Application</span>
+                </a>
+            </li>
+        
+            <li>
+                <a href="index.html">
+                    <span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                    <span class="title">Sign out</span>
+                </a>
+            </li>
+
+
+        </ul>
+    </div>
+    <section class="overlay">
+        <div class="regform">
+            <div class="logoI"><img src="assets\images\ICEP-Logo.png"></div>
+        
+            <h1>Post vacancies</h1>
+            <button [routerLink]="'/postv'" class="btn" type="button">Post vacancy Now</button>
+
+            <hr>
+            <h2>Posted Vacancies</h2>
+            <hr>
+            <table class="table table table-sm table-bordered" style="color: rgb(50, 117, 205);">
+                <thead style="color: rgb(50, 117, 205);">
+                  <tr style="background-color: yellowgreen;">
+
+                  </tr> 
+                </thead>
+                <tbody style="text-align: justify; background-color: rgb(242, 243, 241);">
+                  <tr *ngFor="let posts of post">
+                    
+                    <td  style="text-align: center;"> <b> {{posts.vacancyName}}: </b>    <br> Posted on : {{posts.datePosted}}  <br> job desc: {{posts.vacancyDesc}}</td>
+                    <td></td>
+             
+                  </tr>
+                 
+                </tbody>
+              </table>
+
+
+           <p> &copy; all rights reserved</p>
+
+        </div> 
+    </section>
+</body>

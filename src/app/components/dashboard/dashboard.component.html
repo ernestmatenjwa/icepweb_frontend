@@ -1,0 +1,59 @@
+
+    <head>
+     
+  </head>
+  <title>Applicant Dashboard</title>
+
+<body background="assets/images/back.jpg">
+  <div class="navigation">
+      <ul>
+          <li>
+              <a [routerLink]="'/dashboard'">
+                  <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                  <span class="title">Home</span>
+              </a>
+          </li>
+          <li>
+              <a [routerLink]="'/profile'">
+                  <span class="icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                  <span class="title">Profile</span>
+              </a>
+          </li>
+          <li>
+              <a [routerLink]="'/status'">
+                  <span class="icon"><i class="fa fa-envelope-open-o" aria-hidden="true"></i></span>
+                  <span class="title">Application Status</span>
+              </a>
+          </li>
+          <li>
+              <a [routerLink]="'/messages'">
+                  <span class="icon"><i class="fa fa-comment" aria-hidden="true"></i></span>
+                  <span class="title">Messages</span>
+              </a>
+          </li>
+          <li>
+              <a href="index.html">
+                  <span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                  <span class="title">Sign out</span>
+              </a>
+          </li>
+
+     
+      </ul>
+  </div>
+  <section class="overlay">
+      <div class="regform">
+      
+          <h1>ICEP PORTAL</h1>
+          <h2>Applicant Dashboard</h2>
+
+          <p style="text-align: center; font-size: 30px; color: green;">Profile </p>
+    
+          <button [routerLink]="'/apply'" class="btn" type="button">Apply Now</button>
+          
+          <hr>
+         <p> &copy; all rights reserved</p>
+      </div> 
+
+  </section>
+</body>

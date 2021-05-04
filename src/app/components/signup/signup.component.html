@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Icep Homepage</title>
+    <style>
+        body{
+          background-image: url("assets/images/back.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      </style>
+</head>
+<body>
+
+<section class="overlay">
+<div class="regform">
+    <div class="logoI"><img src="assets\images\ICEP-Logo.png"></div>
+    
+    <form #signUpForm="ngForm" (ngSubmit)="signUpForm.valid && sigup(firstName.value, lastName.value, email.value, password.value)">
+      
+      <h1>Create ICEP Profile</h1>
+      
+            <label for="inputAddress">First Name: <input class="input-box"  [(ngModel)]="currrentApplicant.firstName" id="firstName" name="firstName" type="text" placeholder="Enter firstname" required #firstName></label><br>
+           
+            <label>Surname: <input type="text"  name="lastName" class="input-box" [(ngModel)]="currrentApplicant.lastName" placeholder="Enter Surname" required #lastName></label><br>
+
+            <label>Email: <input type="text" name="email" class="input-box" [(ngModel)]="currrentApplicant.email" placeholder="Enter Email" required name="email"  #email></label><br>
+            
+            <label>Password: <input type="text" name="password" class="input-box" [(ngModel)]="currrentApplicant.password" placeholder="Enter Password" required #password></label><br>
+            <br>
+            <button type="submit" class="reg_btn" >Register</button>  
+        
+            <p> already registered? <a routerLink="/login" routerLinkActive="active">Login</a></p>
+            
+  
+    
+</form>
+
+
+    <hr>
+   <p> &copy; all rights reserved</p>
+
+</div> 
+</section>
+
+</body>
+</html>
